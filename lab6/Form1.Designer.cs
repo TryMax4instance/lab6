@@ -32,8 +32,6 @@
             this.KasBoxX0 = new System.Windows.Forms.TextBox();
             this.KasBoxTo = new System.Windows.Forms.TextBox();
             this.KasDGV = new System.Windows.Forms.DataGridView();
-            this.Ind = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Val = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +51,8 @@
             this.MpdBoxA = new System.Windows.Forms.TextBox();
             this.MpdBoxB = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.Inr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Val = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.KasDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdpDGV)).BeginInit();
             this.SuspendLayout();
@@ -87,28 +87,13 @@
             this.KasDGV.AllowUserToDeleteRows = false;
             this.KasDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KasDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Ind,
+            this.Inr,
             this.Val});
             this.KasDGV.Location = new System.Drawing.Point(12, 25);
             this.KasDGV.Name = "KasDGV";
             this.KasDGV.ReadOnly = true;
             this.KasDGV.Size = new System.Drawing.Size(323, 170);
             this.KasDGV.TabIndex = 4;
-            // 
-            // Ind
-            // 
-            this.Ind.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Ind.HeaderText = "Корень функции";
-            this.Ind.Name = "Ind";
-            this.Ind.ReadOnly = true;
-            this.Ind.Width = 105;
-            // 
-            // Val
-            // 
-            this.Val.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Val.HeaderText = "Значение";
-            this.Val.Name = "Val";
-            this.Val.ReadOnly = true;
             // 
             // label1
             // 
@@ -274,6 +259,21 @@
             this.label9.TabIndex = 24;
             this.label9.Text = "Правая граница (b)";
             // 
+            // Inr
+            // 
+            this.Inr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Inr.HeaderText = "Номер итерации";
+            this.Inr.Name = "Inr";
+            this.Inr.ReadOnly = true;
+            this.Inr.Width = 106;
+            // 
+            // Val
+            // 
+            this.Val.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Val.HeaderText = "Значение";
+            this.Val.Name = "Val";
+            this.Val.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,8 +322,6 @@
         private System.Windows.Forms.TextBox MpdBoxTo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox KasBoxItr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ind;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Val;
         private System.Windows.Forms.Button KasButGr;
         private System.Windows.Forms.Button MpdBatGr;
         private System.Windows.Forms.Button MpdBatCalc;
@@ -334,6 +332,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Root;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Val;
     }
 }
 

@@ -32,18 +32,18 @@ namespace lab6
                 if (Math.Abs(x) > E)
                 {
                     i++;
-                    x = x - (func(x) / derfunc(x));
-                    KasDGV.Rows.Add("x" + i, x);
+                    x = x - (Func(x) / Derfunc(x));
+                    KasDGV.Rows.Add(i, x);
                 }
             }
         }
 
-        double func(double x)
+        double Func(double x)
         {
             return Math.Exp(x) - x * x - 2.0;
         }
 
-        double derfunc(double x) // производная
+        double Derfunc(double x) // производная
         {
             return -2.0 * x * Math.Exp(x);
         }
@@ -62,7 +62,7 @@ namespace lab6
 
             while (Math.Abs(b - a) > E)
             {
-                if (mpd(a) * mpd(x) <= 0) b = x;
+                if (Mpd(a) * Mpd(x) <= 0) b = x;
                 else a = x;
                 x = (a + b) / 2;
                 Itr++;
@@ -70,7 +70,7 @@ namespace lab6
             }
             MessageBox.Show("Номер последней итерации:" + Itr +"\n"+ "Корень уравнения: " + x);
 
-            double mpd(double xm)
+            double Mpd(double xm)
             {
                 return Math.Exp(x) - x * x - 2.0;
             }
