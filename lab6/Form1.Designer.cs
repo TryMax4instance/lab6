@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.KasButCacl = new System.Windows.Forms.Button();
             this.KasBoxX0 = new System.Windows.Forms.TextBox();
             this.KasBoxTo = new System.Windows.Forms.TextBox();
@@ -48,17 +44,17 @@
             this.MpdBoxTo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.KasBoxItr = new System.Windows.Forms.TextBox();
+            this.KasButGr = new System.Windows.Forms.Button();
+            this.MpdBatGr = new System.Windows.Forms.Button();
             this.MpdBatCalc = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.MpdBoxA = new System.Windows.Forms.TextBox();
             this.MpdBoxB = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.Ind = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Val = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.KasDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdpDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // KasButCacl
@@ -91,7 +87,7 @@
             this.KasDGV.AllowUserToDeleteRows = false;
             this.KasDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KasDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Ind,
+            this.Inr,
             this.Val});
             this.KasDGV.Location = new System.Drawing.Point(12, 25);
             this.KasDGV.Name = "KasDGV";
@@ -129,7 +125,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(338, 204);
+            this.label4.Location = new System.Drawing.Point(403, 204);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 14;
@@ -138,7 +134,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(465, 9);
+            this.label6.Location = new System.Drawing.Point(530, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(152, 13);
             this.label6.TabIndex = 12;
@@ -152,7 +148,7 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.Root});
-            this.MdpDGV.Location = new System.Drawing.Point(341, 25);
+            this.MdpDGV.Location = new System.Drawing.Point(406, 25);
             this.MdpDGV.Name = "MdpDGV";
             this.MdpDGV.ReadOnly = true;
             this.MdpDGV.Size = new System.Drawing.Size(340, 170);
@@ -181,7 +177,7 @@
             // 
             // MpdBoxTo
             // 
-            this.MpdBoxTo.Location = new System.Drawing.Point(619, 201);
+            this.MpdBoxTo.Location = new System.Drawing.Point(684, 201);
             this.MpdBoxTo.Name = "MpdBoxTo";
             this.MpdBoxTo.Size = new System.Drawing.Size(62, 20);
             this.MpdBoxTo.TabIndex = 10;
@@ -203,9 +199,27 @@
             this.KasBoxItr.Size = new System.Drawing.Size(62, 20);
             this.KasBoxItr.TabIndex = 16;
             // 
+            // KasButGr
+            // 
+            this.KasButGr.Location = new System.Drawing.Point(205, 314);
+            this.KasButGr.Name = "KasButGr";
+            this.KasButGr.Size = new System.Drawing.Size(130, 23);
+            this.KasButGr.TabIndex = 17;
+            this.KasButGr.Text = "График";
+            this.KasButGr.UseVisualStyleBackColor = true;
+            // 
+            // MpdBatGr
+            // 
+            this.MpdBatGr.Location = new System.Drawing.Point(622, 314);
+            this.MpdBatGr.Name = "MpdBatGr";
+            this.MpdBatGr.Size = new System.Drawing.Size(130, 23);
+            this.MpdBatGr.TabIndex = 20;
+            this.MpdBatGr.Text = "График";
+            this.MpdBatGr.UseVisualStyleBackColor = true;
+            // 
             // MpdBatCalc
             // 
-            this.MpdBatCalc.Location = new System.Drawing.Point(341, 314);
+            this.MpdBatCalc.Location = new System.Drawing.Point(406, 314);
             this.MpdBatCalc.Name = "MpdBatCalc";
             this.MpdBatCalc.Size = new System.Drawing.Size(130, 23);
             this.MpdBatCalc.TabIndex = 19;
@@ -216,7 +230,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(338, 240);
+            this.label8.Location = new System.Drawing.Point(403, 240);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(98, 13);
             this.label8.TabIndex = 21;
@@ -224,14 +238,14 @@
             // 
             // MpdBoxA
             // 
-            this.MpdBoxA.Location = new System.Drawing.Point(442, 237);
+            this.MpdBoxA.Location = new System.Drawing.Point(507, 237);
             this.MpdBoxA.Name = "MpdBoxA";
             this.MpdBoxA.Size = new System.Drawing.Size(62, 20);
             this.MpdBoxA.TabIndex = 22;
             // 
             // MpdBoxB
             // 
-            this.MpdBoxB.Location = new System.Drawing.Point(619, 237);
+            this.MpdBoxB.Location = new System.Drawing.Point(684, 237);
             this.MpdBoxB.Name = "MpdBoxB";
             this.MpdBoxB.Size = new System.Drawing.Size(62, 20);
             this.MpdBoxB.TabIndex = 23;
@@ -239,60 +253,39 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(513, 240);
+            this.label9.Location = new System.Drawing.Point(578, 240);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(104, 13);
             this.label9.TabIndex = 24;
             this.label9.Text = "Правая граница (b)";
             // 
-            // Ind
+            // Inr
             // 
-            this.Ind.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Ind.HeaderText = "Номер итерации";
-            this.Ind.Name = "Ind";
-            this.Ind.ReadOnly = true;
-            this.Ind.Width = 106;
+            this.Inr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Inr.HeaderText = "Номер итерации";
+            this.Inr.Name = "Inr";
+            this.Inr.ReadOnly = true;
+            this.Inr.Width = 106;
             // 
             // Val
             // 
             this.Val.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Val.HeaderText = "Корень уравнения";
+            this.Val.HeaderText = "Значение";
             this.Val.Name = "Val";
             this.Val.ReadOnly = true;
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(687, 12);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Kas";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Pold";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(423, 572);
-            this.chart1.TabIndex = 25;
-            this.chart1.Text = "chart1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 596);
-            this.Controls.Add(this.chart1);
+            this.ClientSize = new System.Drawing.Size(764, 354);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.MpdBoxB);
             this.Controls.Add(this.MpdBoxA);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.MpdBatGr);
             this.Controls.Add(this.MpdBatCalc);
+            this.Controls.Add(this.KasButGr);
             this.Controls.Add(this.KasBoxItr);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -310,7 +303,6 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.KasDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MdpDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,6 +322,8 @@
         private System.Windows.Forms.TextBox MpdBoxTo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox KasBoxItr;
+        private System.Windows.Forms.Button KasButGr;
+        private System.Windows.Forms.Button MpdBatGr;
         private System.Windows.Forms.Button MpdBatCalc;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox MpdBoxA;
@@ -338,9 +332,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Root;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ind;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Val;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 

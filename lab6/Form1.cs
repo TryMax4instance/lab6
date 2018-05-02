@@ -20,35 +20,30 @@ namespace lab6
 
         private void KasButCacl_Click(object sender, EventArgs e)
         {
-            double x = 0.0, y = 0.0, E = 0.0;
+            double x = 0.0, E = 0.0;
             int i = 0;
-
-            chart1.Series[0].Points.Clear();
-
+            
             x = Convert.ToDouble(KasBoxX0.Text);
             E = Convert.ToDouble(KasBoxTo.Text);
             KasDGV.Rows.Clear();
 
-            while (i < Convert.ToInt32(KasBoxItr.Text)) 
+            while (i< Convert.ToInt32(KasBoxItr.Text))
             {
-                if (Math.Abs(func(x)) > E)
+                if (Math.Abs(x) > E)
                 {
-                    y = x;
-                    x = y - func(y) / derfunc(y);
                     i++;
-
+                    x = x - (Func(x) / Derfunc(x));
                     KasDGV.Rows.Add(i, x);
                 }
-                chart1.Series[0].Points.AddXY(i, x);
             }
         }
 
-        double func(double x)
+        double Func(double x)
         {
             return Math.Exp(x) - x * x - 2.0;
         }
 
-        double derfunc(double x) // производная
+        double Derfunc(double x) // производная
         {
             return -2.0 * x * Math.Exp(x);
         }
@@ -57,8 +52,6 @@ namespace lab6
         {
             double a = 0.0, b = 0.0, x = 0.0, E = 0.0;
             int Itr = 0;
-
-            chart1.Series[1].Points.Clear();
 
             E = Convert.ToDouble(MpdBoxTo.Text);
             a = Convert.ToDouble(MpdBoxA.Text);
@@ -69,22 +62,20 @@ namespace lab6
 
             while (Math.Abs(b - a) > E)
             {
-                if (mpd(a) * mpd(x) <= 0) b = x;
+                if (Mpd(a) * Mpd(x) <= 0) b = x;
                 else a = x;
                 x = (a + b) / 2;
                 Itr++;
-
                 MdpDGV.Rows.Add(Math.Abs(b - a), Itr, x);
-                chart1.Series[1].Points.AddXY(Itr, x);
             }
+            MessageBox.Show("Номер последней итерации:" + Itr +"\n"+ "Корень уравнения: " + x);
 
-            double mpd(double xm)
+            double Mpd(double xm)
             {
-                return Math.Exp(x) - (x * x) - 2.0;
+                return Math.Exp(x) - x * x - 2.0;
             }
         }
-
+        
     }
 }
-
 
